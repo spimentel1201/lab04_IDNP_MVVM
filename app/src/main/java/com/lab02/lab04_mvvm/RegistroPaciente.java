@@ -14,8 +14,10 @@ public class RegistroPaciente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_paciente);
-        //ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_registrar_paciente);
-        //activityMainBinding.setViewModel(new RegistrarPacienteViewModel(this));
-        //activityMainBinding.executePendingBindings();
+
     }
 }
+
+//ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_registrar_paciente);
+//activityMainBinding.setViewModel(new RegistrarPacienteViewModel(this));
+//activityMainBinding.executePendingBindings();

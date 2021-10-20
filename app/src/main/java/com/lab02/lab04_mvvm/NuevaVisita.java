@@ -14,9 +14,11 @@ public class NuevaVisita extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nueva_visita);
-        /*ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_nueva_visita);
-        activityMainBinding.setViewModel(new NuevaVisitaViewModel());
-        //activityMainBinding.executePendingBindings();*/
+
     }
 
 }
+
+/*ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_nueva_visita);
+        activityMainBinding.setViewModel(new NuevaVisitaViewModel());
+        //activityMainBinding.executePendingBindings();*/

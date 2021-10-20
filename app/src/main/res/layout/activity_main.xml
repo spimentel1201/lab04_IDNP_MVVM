@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#D8D2D2"
                 android:text="Registrar Paciente"
+                android:background="@drawable/rounded_border"
                 android:onClick="@{()-> viewModel.onRegistrarPacienteClicked()}"
                 android:textColor="#040404" />
 
@@ -60,15 +61,18 @@
                 android:id="@+id/Visita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
                 android:backgroundTint="#D8D2D2"
-                android:text="Visita de Paciente"
+                android:layout_marginTop="40dp"
                 android:onClick="@{()-> viewModel.onRegistrarVisitaClicked()}"
+                android:text="Visita de Paciente"
                 android:textColor="#040404" />
 
             <TextView
                 android:id="@+id/Spacer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"/>
 
             <TextView
                 android:id="@+id/NombrePaciente"

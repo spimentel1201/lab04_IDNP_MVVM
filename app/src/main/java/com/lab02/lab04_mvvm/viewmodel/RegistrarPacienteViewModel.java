@@ -40,24 +40,30 @@ public class RegistrarPacienteViewModel extends BaseObservable {
 
     public void setPacienteNombre(String nombre) {
         paciente.setNombre(nombre);
-        //notifyPropertyChanged(BR.pacienteNombre);
+        notifyPropertyChanged(BR.pacienteNombre);
     }
 
     public void setPacienteDni(String dni) {
         paciente.setDni(dni);
-        //notifyPropertyChanged(BR.pacienteDni);
+        notifyPropertyChanged(BR.pacienteDni);
     }
 
     public void setPacienteDireccion(String direccion) {
         paciente.setDireccion(direccion);
-        //notifyPropertyChanged(BR.pacienteDireccion);
+        notifyPropertyChanged(BR.pacienteDireccion);
     }
 
     public void setPacienteCorreo(String correo) {
         paciente.setCorreo(correo);
-        //notifyPropertyChanged(BR.pacienteCorreo);
+        notifyPropertyChanged(BR.pacienteCorreo);
     }
 
+    public void onRegistroPacienteClicked(){
+        Intent intent = new Intent(context, MenuViewModel.class);
+        context.startActivity(intent);
+        startActivityForResult(intent, 1);
+    }
+}
     /*public void setVisita(Visita visita) {
         visitas.add(visita);
     }
@@ -65,10 +71,3 @@ public class RegistrarPacienteViewModel extends BaseObservable {
     public Visita getVisita(int i) {
         return visitas.get(i);
     }*/
-
-    public void onRegistroPacienteClicked(){
-        Intent intent = new Intent(context, RegistroPaciente.class);
-        context.startActivity(intent);
-        //startActivityForResult(intent, 1);
-    }
-}

@@ -28,7 +28,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="20dp"
                 android:text="Nueva Visita"
                 android:textAlignment="center"
                 android:textSize="34sp" />
@@ -38,11 +38,12 @@
             android:layout_width="279dp"
             android:layout_height="532dp"
             android:orientation="vertical"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            app:layout_constraintVertical_bias="1.0">
 
             <TextView
                 android:id="@+id/dniPaciente"
@@ -63,8 +64,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
                 android:int="@={viewModel.visitaPeso}"
+                android:minHeight="48dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -80,8 +81,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
                 android:int="@={viewModel.visitaTemperatura}"
+                android:minHeight="48dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -97,8 +98,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
                 android:int="@={viewModel.visitaPresion}"
+                android:minHeight="48dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -114,19 +115,30 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
                 android:int="@={viewModel.visitaNivelSaturacion}"
+                android:minHeight="48dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/EnviarCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
                 android:backgroundTint="#D8D2D2"
                 android:onClick="@{()-> viewModel.onRegistroVisitaClicked()}"
                 android:text="Registrar"
                 android:textColor="#040404" />
 
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewUsuario"
+            android:layout_width="150dp"
+            android:layout_height="156dp"
+            android:layout_gravity="center"
+            android:background="@drawable/visita"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="77dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

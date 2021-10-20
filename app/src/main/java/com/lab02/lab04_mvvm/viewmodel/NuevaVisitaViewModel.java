@@ -36,36 +36,25 @@ public class NuevaVisitaViewModel extends BaseObservable {
 
     public void setVisitaPeso(int peso) {
         visita.setPeso(peso);
-        //notifyPropertyChanged(BR.visitaPeso);
+        notifyPropertyChanged(BR.visitaPeso);
     }
     public void setVisitaTemperatura(int temperatura) {
         visita.setTemperatura(temperatura);
-        //notifyPropertyChanged(BR.visitaTemperatura);
+        notifyPropertyChanged(BR.visitaTemperatura);
     }
     public void setVisitaPresion(int presion) {
         visita.setPresion(presion);
-        //notifyPropertyChanged(BR.visitaPresion);
+        notifyPropertyChanged(BR.visitaPresion);
     }
     public void setVisitaNivelSaturacion(int saturacion) {
         visita.setNivelSaturacion(saturacion);
-        //notifyPropertyChanged(BR.visitaSaturacion);
+        notifyPropertyChanged(BR.visitaSaturacion);
     }
 
     public void onRegistroVisitaClicked(){
 
-        int text_peso = Integer.parseInt(peso.getText().toString());
-        int text_temperatura = Integer.parseInt(temperatura.getText().toString());
-        int text_presion = Integer.parseInt(presion.getText().toString());
-        int text_nivelSaturacion = Integer.parseInt(nivelSaturacion.getText().toString());
-
-        nuevaVisita = new Visita(text_peso, text_temperatura, text_presion, text_nivelSaturacion);
-        paciente.setVisita(nuevaVisita);
-
-    };
-
-
         Intent intent = new Intent(context, RegistroPaciente.class);
         context.startActivity(intent);
-        //startActivityForResult(intent, 1);
+        startActivityForResult(intent, 1);
     }
 }
