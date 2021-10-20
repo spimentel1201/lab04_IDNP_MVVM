@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.lab02.lab04_mvvm.viewmodel.RegistrarPacienteViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegistroPaciente">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="352dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Registrar Paciente"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="279dp"
+            android:layout_height="532dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+            <TextView
+                android:id="@+id/correoMedico"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="Ingresar Nombre"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/nombreP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@={viewModel.pacienteNombre}"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="Ingresar DNI"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/dniP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@={viewModel.pacienteDni}"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="Ingresar Dirección"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/direccionP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@={viewModel.pacienteDireccion}"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="Ingresar Correo"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/correoP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@={viewModel.pacienteCorreo}"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/EnviarCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D8D2D2"
+                android:text="Registrar"
+                android:onClick="@{()-> viewModel.onRegistroPacienteClicked()}"
+                android:textColor="#040404" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
